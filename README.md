@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WinItalPascal.Framework
 
 Framework VB.NET per Windows Forms pensato per velocizzare lo sviluppo di applicazioni gestionali moderne con SQL Server, DataGridView avanzati, popup, logging e utility grafiche integrate.
@@ -441,3 +442,7 @@ Funzionalità future:
 
 WinItalPascal.Framework
 Framework VB.NET Windows Forms sviluppato per rapid application development.
+=======
+# WinTest_Framework
+ Framework VB.NET per Windows Forms pensato per velocizzare lo sviluppo di applicazioni gestionali moderne con SQL Server, DataGridView avanzati, popup, logging e utility grafiche integrate.
+
