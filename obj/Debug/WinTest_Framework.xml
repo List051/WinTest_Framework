@@ -1,0 +1,306 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WinTest_Framework
+</name>
+</assembly>
+<members>
+<member name="T:WinTest_Framework.My.Resources.Resources">
+<summary>
+  Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
+</summary>
+</member>
+<member name="P:WinTest_Framework.My.Resources.Resources.ResourceManager">
+<summary>
+  Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
+</summary>
+</member>
+<member name="P:WinTest_Framework.My.Resources.Resources.Culture">
+<summary>
+  Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
+  ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
+</summary>
+</member>
+<member name="P:WinTest_Framework.My.Resources.Resources.agoweb">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WinTest_Framework.My.Resources.Resources.feedback">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:WinTest_Framework.My.Resources.Resources.ImgA">
+<summary>
+  Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.ClientiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.FatturaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.MaterialeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.OrdiniDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.RisultatoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.View_1CliOrdDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaCittaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaClientiPerCittaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaClientiPerProvDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaImageOKDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaNumFatClienteFatDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.ClientiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.FatturaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.MaterialeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.OrdiniRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.RisultatoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.View_1CliOrdRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaCittaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaClientiPerCittaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaClientiPerProvRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaImageOKRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaNumFatClienteFatRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.ClientiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.FatturaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.MaterialeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.OrdiniRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.RisultatoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.View_1CliOrdRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaCittaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaClientiPerCittaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaClientiPerProvRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaImageOKRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSet.VistaNumFatClienteFatRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.ClientiTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.FatturaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.MaterialeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.OrdiniTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.RisultatoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.View_1CliOrdTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.VistaCittaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.VistaClientiPerCittaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.VistaClientiPerProvTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.VistaImageOKTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.VistaNumFatClienteFatTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(WinTest_Framework.DBClientiDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(WinTest_Framework.DBClientiDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(WinTest_Framework.DBClientiDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.UpdateAll(WinTest_Framework.DBClientiDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:WinTest_Framework.DBClientiDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
