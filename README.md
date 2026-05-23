@@ -13,13 +13,15 @@ WinItalPascal semplifica lo sviluppo di applicazioni desktop offrendo utility pr
 * Logging automatico
 
 ---
-
 # 🎬 Demo Video
 
 Guarda la demo completa della libreria:
 
-📺 **YouTube Demo**
-[https://youtu.be/UTgw-ERTfCk](https://youtu.be/UTgw-ERTfCk)
+📺 **YouTube Demo**  
+https://youtu.be/UTgw-ERTfCk
+
+🎬 **Elenco video e versioni:**  
+https://List051.github.io/WinTest_Framework/video.html
 
 ---
 
