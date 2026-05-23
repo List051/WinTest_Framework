@@ -1,7 +1,82 @@
-<<<<<<< HEAD
-# WinItalPascal.Framework
+# WinItalPascal
 
-Framework VB.NET per Windows Forms pensato per velocizzare lo sviluppo di applicazioni gestionali moderne con SQL Server, DataGridView avanzati, popup, logging e utility grafiche integrate.
+Libreria Utility per applicazioni WinForms in VB.NET (.NET Framework 4.8).
+
+WinItalPascal semplifica lo sviluppo di applicazioni desktop offrendo utility pronte per:
+
+* Gestione DataGridView
+* Connessioni Database SQL Server
+* Personalizzazione Form
+* Effetti grafici
+* Popup e notifiche
+* Gestione configurazioni
+* Logging automatico
+
+---
+
+# 🎬 Demo Video
+
+Guarda la demo completa della libreria:
+
+📺 **YouTube Demo**
+[https://youtu.be/UTgw-ERTfCk](https://youtu.be/UTgw-ERTfCk)
+
+---
+
+# 📦 Installazione
+
+Installazione tramite NuGet Package Manager:
+
+```powershell
+Install-Package WinItalPascal
+```
+
+Oppure tramite Visual Studio:
+
+```text
+Tools → NuGet Package Manager → Manage NuGet Packages
+```
+
+Cerca:
+
+```text
+WinItalPascal
+```
+
+---
+
+# 🗄️ Connection String
+
+La libreria utilizza una connection string chiamata obbligatoriamente:
+
+```text
+MiaConnessione
+```
+
+Da inserire nel file:
+
+```text
+App.config
+```
+
+Esempio:
+
+```xml
+<connectionStrings>
+    <add name="MiaConnessione"
+         connectionString="Data Source=SERVER;
+         Initial Catalog=DBClienti;
+         Integrated Security=True;
+         TrustServerCertificate=True"
+         providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+
+### Note
+
+* `MiaConnessione` deve esistere nel file App.config
+* `DBClienti` è il database utilizzato negli esempi demo
+* Compatibile con SQL Server
 
 ---
 
@@ -24,12 +99,12 @@ WinItalPascal
 │   ├── FormUtility.vb
 │   ├── FadeUtility.vb
 │   ├── ScreenUtility.vb
-│   ├── FrmTitolo.vb
+│   
 │
 ├── Logging
 │   ├── FrameworkLogger.vb
 │   ├── LogReader.vb
-│   ├── LogConfig.vb
+│   
 │
 ├── Popup
 │   ├── PopupForm.vb
@@ -40,306 +115,94 @@ WinItalPascal
 
 # 🚀 Funzionalità Principali
 
-* Gestione SQL Server semplificata
-* Query parametrizzate automatiche
-* DataGridView avanzati
+## 🎨 GridUtility
+
+Utility per la gestione avanzata dei DataGridView.
+
+Funzioni disponibili:
+
+* Inizializzazione automatica DataGridView
+* Colorazione automatica colonne
+* Evidenziazione righe selezionate
+* Evidenziazione testo
+* Gestione colori predefiniti
+* Conversione testo maiuscolo
+* Reset colori griglia
 * Ricerca automatica multi-colonna
-* Titoli personalizzati per Form
-* Fade-In / Fade-Out Form
-* Popup informativi personalizzabili
-* Logging automatico
-* Utility grafiche integrate
-* Gestione colori e font centralizzata
 
 ---
 
-# ⚙️ Configurazione Database
+## 🧮 DB
 
-Il framework utilizza SQL Server tramite connection string definita in `App.config`.
+Utility per accesso database SQL Server.
 
-## App.config
+Funzioni disponibili:
 
-```xml
-<connectionStrings>
-    <add name="MiaConnessione"
-         connectionString="Data Source=UTENTE-PC;
-         Initial Catalog=DBClienti;
-         Integrated Security=True;
-         TrustServerCertificate=True"
-         providerName="System.Data.SqlClient" />
-</connectionStrings>
-```
+* Connessione SQL Server
+* ExecuteScalar
+* ExecuteNonQuery
+* ExecuteReader
+* FillDataTable
+* FillDataSet
+* Query parametrizzate
+* Query LIKE automatiche
 
 ---
 
-# 🗄️ Classe DB.vb
+## 🪟 FormHelper
 
-## ✔ GetConnection
+Gestione grafica dei Form WinForms.
 
-Apre automaticamente una connessione SQL leggendo la connection string da `App.config`.
+Funzioni disponibili:
 
-```vb
-Dim conn = DB.GetConnection()
-```
-
----
-
-## ✔ FillDataTable
-
-Riempie un `DataTable` tramite query SQL.
-
-```vb
-Dim dt = DB.FillDataTable(
-    "SELECT * FROM Clienti")
-```
+* Centratura monitor
+* Fade-In / Fade-Out
+* Apertura form in panel
+* Titolo personalizzato
+* Gestione form borderless
 
 ---
 
-## ✔ ExecuteNonQuery
+## 📺 ScreenUtility
 
-Esegue query `INSERT`, `UPDATE`, `DELETE`.
+Utility per il posizionamento dei form.
 
-```vb
-DB.ExecuteNonQuery(
-"DELETE FROM Clienti WHERE IdClienti = @p1",
-New List(Of SqlParameter) From {
-    New SqlParameter("@p1", 1)
-})
-```
+Funzioni disponibili:
+
+* Centratura automatica monitor
+* Gestione schermo attivo
 
 ---
 
-## ✔ ExecuteScalar
+## 🌫 FadeUtility
 
-Restituisce un singolo valore (`COUNT`, `MAX`, ecc.).
+Effetti grafici per controlli e form.
 
-```vb
-Dim totale =
-DB.ExecuteScalar(
-"SELECT COUNT(*) FROM Clienti")
-```
+Funzioni disponibili:
 
----
-
-## ✔ QueryLike
-
-Ricerca semplificata automatica con `LIKE`.
-
-```vb
-Dim dt = DB.QueryLike(
-"SELECT * FROM Clienti
- WHERE Citta LIKE @p1
-   AND CAP LIKE @p2
-   AND Cliente LIKE @p3",
-TxtCitta.Text,
-TxtCAP.Text,
-TxtCliente.Text)
-```
+* Fade-In
+* Fade-Out
+* Transizioni UI
 
 ---
 
-# 🎨 GridUtility.vb
+## 📝 Logging
 
-Classe dedicata alla gestione avanzata dei `DataGridView`.
+Sistema di logging automatico integrato.
 
----
+Funzioni disponibili:
 
-## ✔ Initialize
-
-Configura automaticamente il DataGridView.
-
-```vb
-GridUtility.Initialize(DataGridView1)
-```
+* Scrittura log
+* Gestione errori
+* Lettura file log
+* Apertura log con Notepad
+* Pulizia log
 
 ---
 
-## ✔ ColoraColonne
+# 🔧 Esempi di Utilizzo
 
-Colora automaticamente le prime colonne.
-
-```vb
-GridUtility.ColoraColonne(
-DataGridView1,
-Colori.ColoreTipo.Giallo,
-Colori.ColoreTipo.Azzurro,
-Colori.ColoreTipo.VerdeChiaro)
-```
-
----
-
-## ✔ ConvertiMaiuscolo
-
-Converte il testo della grid in maiuscolo.
-
-```vb
-GridUtility.ConvertiMaiuscolo(DataGridView1)
-```
-
----
-
-## ✔ EvidenziaTesto
-
-Evidenzia celle contenenti testo specifico.
-
-```vb
-GridUtility.EvidenziaTesto(
-DataGridView1,
-"ROMA")
-```
-
----
-
-## ✔ FiltraTutti
-
-Ricerca intelligente multi-colonna tipo Google Search.
-
-```vb
-GridUtility.FiltraTutti(
-DataGridView1,
-dtOriginal,
-TxtRicerca.Text)
-```
-
----
-
-# 🪟 FormHelper.vb
-
-Utility per gestione Form.
-
----
-
-## ✔ CentraMonitor
-
-Centra automaticamente il Form nel monitor corrente.
-
-```vb
-FormHelper.CentraMonitor(Me)
-```
-
----
-
-## ✔ TitoloPersonalizzato
-
-Aggiunge barra titolo personalizzata.
-
-```vb
-FormHelper.TitoloPersonalizzato(
-Me,
-"Titolo Personalizzato")
-```
-
----
-
-## ✔ FadeIn
-
-Effetto apertura graduale.
-
-```vb
-Await FormHelper.FadeIn(Me)
-```
-
----
-
-## ✔ FadeOut
-
-Effetto chiusura graduale.
-
-```vb
-Await FormHelper.FadeOut(Me)
-```
-
----
-
-# 🖥️ FrmTitolo.vb
-
-Sistema avanzato per creare finestre borderless con:
-
-* Barra titolo custom
-* Pulsante chiudi
-* Pulsante minimizza
-* Trascinamento finestra
-
-## Utilizzo
-
-```vb
-FrmTitolo.CTitolo(
-Me,
-"Titolo Personalizzato")
-```
-
----
-
-# 🧾 Logging
-
-## ✔ FrameworkLogger
-
-Scrive automaticamente errori e messaggi nel file:
-
-```text
-WinItalPascal_Log.txt
-```
-
-### Scrittura manuale
-
-```vb
-FrameworkLogger.Log(
-"Operazione completata")
-```
-
-### Log errori
-
-```vb
-FrameworkLogger.LogError(
-ex,
-"ContestoErrore")
-```
-
----
-
-## ✔ LogReader
-
-Legge o apre il file di log.
-
-### Leggere log
-
-```vb
-Dim testo =
-LogReader.ReadLog()
-```
-
-### Aprire log
-
-```vb
-LogReader.OpenLog()
-```
-
-### Cancellare log
-
-```vb
-LogReader.ClearLog()
-```
-
----
-
-# 💬 PopupHelper
-
-Popup grafici associabili ai controlli.
-
-## ✔ AttachPopup
-
-```vb
-PopupHelper.AttachPopup(
-BtnInfo,
-"Informazioni utili",
-My.Resources.Info,
-Color.Aquamarine,
-Color.Blue)
-```
-
----
-
-# 📦 Import Necessari
+## Import Libreria
 
 ```vb
 Imports WinItalPascal
@@ -349,100 +212,227 @@ Imports System.Threading.Tasks
 
 ---
 
-# 🧪 Esempio Completo
-
-## Inizializzazione Form
+# 🪟 Centratura Form e Titolo Personalizzato
 
 ```vb
-Private Sub Form1_Load(...) Handles MyBase.Load
+FormHelper.CentraMonitor(Me)
 
-    FormHelper.CentraMonitor(Me)
-
-    FrmTitolo.CTitolo(
+FrmTitolo.CTitolo(
     Me,
-    "Demo WinItalPascal")
+    "Demo WinItalPascal"
+)
+```
 
-    GridUtility.Initialize(DataGridView1)
+---
 
-    Dim dt =
-    DB.FillDataTable(
-    "SELECT TOP 20 * FROM Clienti")
+# 🎨 Inizializzazione DataGridView
 
-    DataGridView1.DataSource = dt
+```vb
+GridUtility.Initialize(DgvTest)
+```
+
+---
+
+# 🗄️ Caricamento Dati SQL
+
+```vb
+Dim dt = DB.FillDataTable(
+    "SELECT TOP 20 * FROM Clienti"
+)
+
+DgvTest.DataSource = dt
+```
+
+---
+
+# 🎨 Colorazione Grid
+
+```vb
+GridUtility.ColoraColonne(
+    DgvTest,
+    Colori.ColoreTipo.Giallo,
+    Colori.ColoreTipo.Azzurro,
+    Colori.ColoreTipo.VerdeChiaro
+)
+
+GridUtility.ColoraOK(DgvTest)
+```
+
+---
+
+# 🔍 Evidenziazione Testo
+
+```vb
+GridUtility.EvidenziaTesto(
+    DgvTest,
+    "ROMA"
+)
+```
+
+---
+
+# 🟩 Riga Selezionata
+
+```vb
+Private Sub BtnColoraRiga_Click(
+    sender As Object,
+    e As EventArgs
+) Handles BtnColoraRiga.Click
+
+    GridUtility.ColoraRigaSelezionata(
+        DgvTest,
+        Colori.ColoreTipo.Azzurro
+    )
 
 End Sub
 ```
 
 ---
 
-# 🔍 Ricerca Automatica Real-Time
+# 📌 Popup Informativi
 
 ```vb
-Private Sub TxtRicerca_TextChanged(...) _
-Handles TxtRicerca.TextChanged
+Dim img As Image = My.Resources.ImgA
 
-    GridUtility.FiltraTutti(
-    DataGridView1,
-    dtOriginal,
-    TxtRicerca.Text)
+PopupHelper.AttachPopup(
+    BtnColoraRiga,
+    "Colore Riga Selezionata",
+    img
+)
+```
+
+---
+
+# 🔎 Query Parametrizzate LIKE
+
+```vb
+Private Sub BtnQuery_Click(
+    sender As Object,
+    e As EventArgs
+) Handles BtnQuery.Click
+
+    Dim dt = DB.QueryLike(
+        "SELECT * FROM Clienti
+         WHERE Citta LIKE @p1
+         AND CAP LIKE @p2
+         ORDER BY Cliente",
+
+        TxtCercaP1.Text,
+        TxtCercaP2.Text
+    )
+
+    DgvTest.DataSource = dt
 
 End Sub
 ```
 
 ---
 
-# ✏️ Modifica Diretta Database da Grid
+# 🔢 ExecuteScalar
 
 ```vb
-Private Sub DataGridView1_RowLeave(...) _
-Handles DataGridView1.RowLeave
-```
+Dim totaleClienti = DB.ExecuteScalar(
+    "SELECT COUNT(*) FROM Clienti"
+)
 
-Aggiorna automaticamente SQL Server quando l’utente modifica una riga.
+MessageBox.Show(
+    totaleClienti.ToString()
+)
+```
 
 ---
 
-# 📌 Requisiti
+# ⚙️ ConfigHelper
 
-* .NET Framework 4.8+
+```vb
+Dim cs = ConfigHelper.GetConnectionString()
+
+MessageBox.Show(
+    cs,
+    "Connection String"
+)
+```
+
+---
+
+# 📝 Lettura File di Log
+
+```vb
+MessageBox.Show(
+    LogReader.ReadLog(),
+    "FILE LOG"
+)
+```
+
+---
+
+# 📂 Apertura File Log
+
+```vb
+LogReader.OpenLog()
+```
+
+---
+
+# 🧹 Pulizia File Log
+
+```vb
+LogReader.ClearLog()
+```
+
+---
+
+# 🎨 Colori Disponibili
+
+```vb
+Public Enum ColoreTipo
+
+    Verde = 1
+    Bianco = 2
+    Nero = 3
+    Azzurro = 4
+    Giallo = 5
+    Oro = 6
+    VerdeChiaro = 7
+    BluScuro = 8
+    VerdeScuro = 9
+
+End Enum
+```
+
+---
+
+# 🛠 Compatibilità
+
+* .NET Framework 4.8
+* VB.NET WinForms
 * SQL Server
-* Windows Forms
-* Visual Studio 2022 consigliato
+* Visual Studio 2019 / 2022
 
 ---
 
-# 📖 Filosofia del Framework
+# 📚 Progetto Demo
 
-WinItalPascal nasce con l’obiettivo di:
+Nel repository è presente anche un progetto demo completo con:
 
-* ridurre il codice ripetitivo
-* semplificare SQL Server
-* velocizzare sviluppo WinForms
-* centralizzare grafica e utility
-* creare applicazioni gestionali moderne
-
----
-
-# 🛠️ Stato Progetto
-
-Framework in continua evoluzione.
-
-Funzionalità future:
-
-* Explorer SQL integrato
-* CRUD automatici
-* Tema Dark Mode
-* Export Excel/PDF
-* Componenti UI avanzati
-* Gestione utenti/permessi
+* esempi DataGridView
+* query SQL
+* popup
+* logging
+* modifica dati
+* ricerca automatica
+* form personalizzati
 
 ---
 
 # 👨‍💻 Autore
 
-WinItalPascal.Framework
-Framework VB.NET Windows Forms sviluppato per rapid application development.
-=======
-# WinTest_Framework
- Framework VB.NET per Windows Forms pensato per velocizzare lo sviluppo di applicazioni gestionali moderne con SQL Server, DataGridView avanzati, popup, logging e utility grafiche integrate.
+ItalPascal
 
+---
+
+# 📄 Licenza
+
+MIT License
+
+Uso libero per progetti personali e aziendali.
