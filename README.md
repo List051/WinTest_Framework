@@ -21,7 +21,10 @@ Guarda la demo completa della libreria:
 https://youtu.be/UTgw-ERTfCk
 
 🎬 **Elenco video e versioni:**  
-https://List051.github.io/WinTest_Framework/video.html
+
+[Visualizza la pagina](https://htmlpreview.github.io/?https://github.com/List051/WinTest_Framework/blob/main/Video.html)
+
+Option download in local : https://List051.github.io/WinTest_Framework/video.html
 
 ---
 
